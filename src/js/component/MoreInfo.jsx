@@ -2,6 +2,7 @@ import React from "react";
 import { Link } from "react-router-dom";
 
 export const MoreInfo = () => {
+    
 	return (
         <div className="d-flex">
             <div className="card" style={{width: "18rem"}}>

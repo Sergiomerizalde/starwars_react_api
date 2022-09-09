@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 
 export const Navbar = () => {
 	return (
-		<nav className="navbar navbar-light bg-light mb-3">
+		<nav className="navbar navbar-light bg-light mb-3 justify-content-around">
 			<Link to="/">
 			<img style={{height:"50px", width:"50px"}}
 			className="justify-content-center"

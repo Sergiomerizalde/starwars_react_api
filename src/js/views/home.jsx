@@ -7,7 +7,10 @@ import { Planets } from "../component/Planets.jsx";
 
 export const Home = () => (
 	<div className="container">
-		<CharacterCard/>
+		<h1 className="display-1">Characters</h1>
+			<div className="overflow-auto d-flex container-flex">
+				<CharacterCard/>
+			</div>
 		<Planets/>
 	</div>
 );
