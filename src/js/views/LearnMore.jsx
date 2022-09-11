@@ -8,10 +8,15 @@ export const LearnMore = () => {
     const [character, setCharacter] = useState("");
     const characterUrl = 'https://www.swapi.tech/api/people/'+params.theid;
     const imgUrl = "https://starwars-visualguide.com/assets/img/characters";
+
     useEffect(() => {
-      fetch(characterUrl).then(res => res.json()).then(data => setCharacter(data)).catch(err => err);
+      fetch(characterUrl)
+      .then(res => res.json())
+      .then(data => setCharacter(data))
+      .catch(err => err);
       console.log(character)
     },[])
+    
     return (
     <div className='container'>
       {character === "" ? <h1>Cargando...</h1> :

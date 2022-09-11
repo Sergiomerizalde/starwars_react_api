@@ -7,10 +7,17 @@ import { Planets } from "../component/Planets.jsx";
 
 export const Home = () => (
 	<div className="container">
+		<div className="container-flex">
 		<h1 className="display-1">Characters</h1>
-			<div className="overflow-auto d-flex container-flex">
+			<div className="overflow-auto d-flex">
 				<CharacterCard/>
 			</div>
-		<Planets/>
+		</div>
+		<div className="container-flex">
+		<h1 className="display-1">Planets</h1>
+			<div className="overflow-auto d-flex">
+				<Planets/>
+			</div>	
+		</div>	
 	</div>
 );

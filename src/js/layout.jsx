@@ -7,6 +7,7 @@ import { Demo } from "./views/demo.jsx";
 import { Single } from "./views/single.jsx";
 import injectContext from "./store/appContext.jsx";
 import { LearnMore } from "./views/LearnMore.jsx"
+import { LearnMorePlanets } from "./views/LearnMorePlanets.jsx";
 
 import { Navbar } from "./component/Navbar.jsx";
 import { Footer } from "./component/footer.jsx";
@@ -34,6 +35,9 @@ const Layout = () => {
 						</Route>
 						<Route exact path="/LearnMore/:theid">
 							<LearnMore/>
+						</Route>
+						<Route exact path="/LearnMorePlanets/:theid">
+							<LearnMorePlanets/>
 						</Route>
 						<Route>
 							<h1>Not found!</h1>
