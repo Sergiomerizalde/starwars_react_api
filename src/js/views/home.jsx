@@ -6,15 +6,15 @@ import { CharacterCard } from "../component/CharacterCard.jsx"
 import { Planets } from "../component/Planets.jsx";
 
 export const Home = () => (
-	<div className="container">
-		<div className="container-flex">
+	<div className="container p-1 mb-4 bg-secondary text-white">
 		<h1 className="display-1">Characters</h1>
+		<div className="container-flex">
 			<div className="overflow-auto d-flex">
 				<CharacterCard/>
 			</div>
 		</div>
-		<div className="container-flex">
 		<h1 className="display-1">Planets</h1>
+		<div className="container-flex">
 			<div className="overflow-auto d-flex">
 				<Planets/>
 			</div>	

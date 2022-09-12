@@ -22,7 +22,7 @@ export const LearnMore = () => {
       {character === "" ? <h1>Cargando...</h1> :
       <div className='row'>
         <div className='col-12 col-md-8 col-lg-6'>
-          <img src={`${imgUrl}/${character.result.theid}.jpg`}/>
+          <img src={`${imgUrl}/${character.result.uid}.jpg`}/>
         </div>
         <div className='col-12 col-md-4 col-lg-6'>
             <h1 id='name'>{character.result.properties.name}</h1>
