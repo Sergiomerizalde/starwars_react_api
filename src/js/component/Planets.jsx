@@ -6,7 +6,7 @@ export const Planets = () => {
     // console.log(useContext(Context))
     const {store, actions}=useContext(Context); //consumir el contexto
 	return (
-     <div>
+     <>
     {store.planets.map((item,i) => { 
      return (  
     <div>
@@ -31,6 +31,6 @@ export const Planets = () => {
         
      )
     })} 
-    </div>   
+    </>   
     )
     }

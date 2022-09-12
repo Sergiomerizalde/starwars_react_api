@@ -6,7 +6,7 @@ import { CharacterCard } from "../component/CharacterCard.jsx"
 import { Planets } from "../component/Planets.jsx";
 
 export const Home = () => (
-	<div className="container p-1 mb-4 bg-secondary text-white">
+	<div className="container p-1 mb-4 bg-secondary">
 		<h1 className="display-1">Characters</h1>
 		<div className="container-flex">
 			<div className="overflow-auto d-flex">
