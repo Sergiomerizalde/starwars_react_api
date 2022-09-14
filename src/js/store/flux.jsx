@@ -5,6 +5,7 @@ const getState = ({ getStore, getActions, setStore }) => {
 			personaje: [],
 			planets: [],
 			planeta: [],
+			favorites: [],
 		},
 		actions: {
 			// Use getActions to call a function within a fuction
@@ -37,6 +38,15 @@ const getState = ({ getStore, getActions, setStore }) => {
 				.then((response) => response.json())
 				.then(data => setStore({planets: data.results}))
 			},
+			setearFavorite:(item) =>{
+				const store = getStore();
+				store.favorites.includes(item) ?  getActions.borrarFavorite(item) : setStore({favorites:([...store.favorites,item])})
+			},
+			borrarFavorite: (itemborrado) =>{
+				const store = getStore();
+				let nuevoFavorite = store.favorites.filter(item => itemborrado !== item)
+					setStore({favorites: nuevoFavorite})
+				},
 			changeColor: (index, color) => {
 				//get the store
 				const store = getStore();
