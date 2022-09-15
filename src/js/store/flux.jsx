@@ -40,13 +40,14 @@ const getState = ({ getStore, getActions, setStore }) => {
 			},
 			setearFavorite:(item) =>{
 				const store = getStore();
-				store.favorites.includes(item) ?  getActions.borrarFavorite(item) : setStore({favorites:([...store.favorites,item])})
+				const tempFavorite = store.favorites.concat(item);
+				setStore({favorites: tempFavorite});
 			},
 			borrarFavorite: (itemborrado) =>{
 				const store = getStore();
-				let nuevoFavorite = store.favorites.filter(item => itemborrado !== item)
-					setStore({favorites: nuevoFavorite})
-				},
+				let nuevoFavorite = store.favorites.filter((item)=> itemborrado !== item)
+					setStore({favorites: nuevoFavorite});
+			},
 			changeColor: (index, color) => {
 				//get the store
 				const store = getStore();

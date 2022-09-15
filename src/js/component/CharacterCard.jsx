@@ -22,7 +22,7 @@ export const CharacterCard = () => {
                     <Link to={"/LearnMore/"+item.uid}>
                     <a className="btn btn-primary">Learn more!</a>
                     </Link>
-                    <button className="btn btn-primary bg-dark" onClick={() => actions.setearFavorite(item.name)}>🤍</button>
+                    <button className="btn btn-primary bg-dark" onClick={() => {actions.setearFavorite(item.name)}}>🤍</button>
                     </div>
                 </div>
             </div>

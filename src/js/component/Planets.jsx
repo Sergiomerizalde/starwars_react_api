@@ -20,9 +20,9 @@ export const Planets = () => {
                 <p className="card-text">{item.eye_color}</p>
                     <div className="d-flex justify-content-between">   
                     <Link to={"/LearnMorePlanets/"+item.uid}>
-                    <a href="#" className="btn btn-primary">Learn more!</a>
+                    <a className="btn btn-primary">Learn more!</a>
                     </Link>
-                    <a href="#" className="btn btn-primary bg-dark">🤍</a>
+                    <button className="btn btn-primary bg-dark" onClick={() => {actions.setearFavorite(item.name)}}>🤍</button>
                     </div>
                 </div>
             </div>

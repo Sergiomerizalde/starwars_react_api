@@ -4,7 +4,7 @@ import { Context } from "../store/appContext.jsx";
 
 export const Navbar = () => {
 	const {store, actions} = useContext(Context); //consumir el contexto
-
+	console.log(store.favorites);
 	return (
 		<nav className="navbar navbar-light bg-dark mb-3 justify-content-around">
 			<Link to="/">
@@ -14,37 +14,31 @@ export const Navbar = () => {
             alt="example"
           	/>
 			</Link>
-		<ul>
-			<li className="nav-item dropdown">
-				<a className="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+			<button
+				className="btn btn-secondary dropdown-toggle"
+				type="button"
+				id="dropdownMenuButton1"
+				data-bs-toggle="dropdown"
+				aria-expanded="false"
+			>
 				Favorites
-				</a>
-				{/* <ul className="dropdown-menu">
-				<li><a className="dropdown-item" href="#">Favorite list</a></li>
-				</ul> */}
-				<div className="container col-6 text-center">
-				<ul> 
-				{store.favorites.map((item,index)=>{
-					return (
-						<li key={index}>
-							{" "}
-						 	{item.name} 
-							<span> 
-								<button
-									type="button"
-									className="btn"
-									onClick={()=>actions.borrarFavorite(item)}
-									>
-									X 
-								</button>	
-							</span>
-						</li>
-					);
-					})}
-				</ul>
-			</div>
-			</li>
-		</ul>	
+			</button>
+			<ul className="dropdown-menu p-2 dropdown-menu-end align-content-center" aria-labelledby="dropdownMenuButton1">
+				{store.favorites.map((element, index) => {
+				return (
+					<li key={index}>
+					{element}{" "}
+					<button
+						onClick={() => {
+						actions.borrarFavorite(element);
+						}}
+					>
+						X
+					</button>
+					</li>
+				);
+				})}
+			</ul>	
 		</nav>
 	);
 };
